@@ -41,6 +41,19 @@ export class httpService {
             return response
         })
     }
+
+    async createGame(gameAsJson) {
+
+        fetch(baseUrl + "/game", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(gameAsJson)
+        }).then(response => {
+            return response
+        })
+    }
 }
 
 export default httpService;

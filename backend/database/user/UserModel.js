@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const Schema  = mongoose.Schema
 
-class DbModels {
+class UserModel {
     get headerModel() {
         return this._headerModel;
     }
@@ -17,12 +17,14 @@ class DbModels {
             age: Number,
             role:String,
             activated:Boolean
-        }));
+        }))
+
         this._headerModel = mongoose.model(('header'),  new Schema({
             name: String,
             headers: []
         }))
+
     }
 }
 
-module.exports.DbModels = DbModels
+module.exports.UserModel = UserModel

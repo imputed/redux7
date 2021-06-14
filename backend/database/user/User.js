@@ -1,7 +1,6 @@
-const {DbModels} = require("../DbModels")
-const dbm = new DbModels()
-const userModel = dbm.userModel
-const headerModel = dbm.headerModel
+const UserModel = require('./UserModel')
+const model  =  new UserModel.UserModel()
+const userModel = model.userModel
 
 class User {
     create(name, age, role) {

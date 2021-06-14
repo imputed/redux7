@@ -21,11 +21,17 @@ db.once('open', function () {
 
 const User = require('./database/user/User')
 let u = new User.User()
+const GameModel = require('./database/game/Game')
+let g = new GameModel.Game()
 
 mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.post('/user', (req, res) => {
     let result =     u.create(req.body.name,req.body.age,req.body.role)
+    res.send(JSON.stringify(result))
+})
+app.post('/game', (req, res) => {
+    let result =    g.create(req.body.player, req.body.winner)
     res.send(JSON.stringify(result))
 })
 

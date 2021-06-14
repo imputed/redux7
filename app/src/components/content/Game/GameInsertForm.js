@@ -1,17 +1,22 @@
 import React, {Component} from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 import {Box, Button, Card, Checkbox, Grid, Table, TableCell, Typography} from "@material-ui/core";
+import httpService from "../../../services/httpService";
 const useStyles = makeStyles((theme) => ({
     box: {
         boxShadow: 'rgb(38, 57, 77) 0px 20px 30px -10px',
         padding: 50,
         marginBottom: 10,
-        width:"25%"
+        width:"30%"
     },
 }));
-
+const svc = new httpService()
 export function GameInsertForm(props) {
-    const classes = useStyles()
+      const classes = useStyles()
+    const createGame= (event) =>{
+    svc.createGame({player: props.players, winner:props.players[0]})
+
+    }
     return (
         <Box className={classes.box}>
             <Card>
@@ -36,7 +41,7 @@ export function GameInsertForm(props) {
                             )
                         })}
                         <Grid item style={{margin: 50}}>
-                            +
+                            <Button onClick={(event)=> createGame(event)}>+</Button>
                         </Grid>
 
                     </Grid>
