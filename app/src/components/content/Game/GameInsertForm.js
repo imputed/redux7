@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 import {Box, Button, Card, Checkbox, Grid, Table, TableCell, Typography} from "@material-ui/core";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-
 const useStyles = makeStyles((theme) => ({
     box: {
         boxShadow: 'rgb(38, 57, 77) 0px 20px 30px -10px',

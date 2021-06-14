@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4ef69b6-660d-4c73-aa04-6cdd189ccc4f" name="Default Changelist" comment="New Game Added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/GameInsertForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/GameInsertForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/PlayerSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/PlayerSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/PlayerTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/PlayerTable.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,7 @@
       <workItem from="1623654115024" duration="497000" />
       <workItem from="1623663505376" duration="7775000" />
       <workItem from="1623674981059" duration="881000" />
-      <workItem from="1623694057184" duration="299000" />
+      <workItem from="1623694057184" duration="606000" />
     </task>
     <servers />
   </component>
