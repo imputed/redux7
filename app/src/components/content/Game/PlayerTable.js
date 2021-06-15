@@ -15,7 +15,7 @@ import Paper from '@material-ui/core/Paper';
 import {selectRoundPlayers} from "../../../redux/game/GameSlice";
 import {selectUsers} from "../../../redux/Users/UsersSlice";
 import GameInsertForm from "./GameInsertForm";
-
+import httpService from "../../../services/httpService";
 
 const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -44,26 +44,20 @@ const useStyles = makeStyles({
 
 export function PlayerTable() {
     const classes = useStyles();
-
-    const players = useSelector(selectRoundPlayers)
-    const users = useSelector(selectUsers).filter((u) => {
-        for (var i = 0; i < 4; i++) {
-            if (u._id === players[i]) {
-                return true
-            }
-        }
-        return false
+    const svc = new httpService()
+    const [rounds, setRounds] = React.useState([])
+    svc.getAllGames().then((games) => {
+        setRounds(games)
     })
 
-    if(users.length !== 4)
-    {
+
+    if (rounds.length === 0) {
         return ''
-    } else
-    {
+    } else {
 
         return (
             <Box>
-                <GameInsertForm players={users}/>
+                <GameInsertForm players={rounds[0].players}/>
 
 
                 <TableContainer component={Paper}>
@@ -71,44 +65,62 @@ export function PlayerTable() {
                         <TableHead>
                             <TableRow>
 
+                                {
 
-                                <StyledTableCell align={"center"}>#</StyledTableCell>
-                                {users.map((u, index) => (
 
-                                    <StyledTableCell component="th" scope="row" align={"center"}>
-                                        Player {index+1}: {users[index].name}
-                                    </StyledTableCell>
+                                            rounds[0].players.map((p) => {
+                                                return (<StyledTableCell align="center">{p.name}</StyledTableCell>)
+                                            })
 
-                                ))}
+
+                                }
 
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {users.map((u) => (
-                                <StyledTableRow key={u.name}>
-                                    <StyledTableCell align="center" component="th" scope="row">
-                                        {u.name}
-                                    </StyledTableCell>
-                                    <StyledTableCell align="center" component="th" scope="row">
-                                        <Checkbox/> {u.name}
-                                    </StyledTableCell>
-                                    <StyledTableCell align="center" component="th" scope="row">
-                                        <Checkbox/> {u.name}
-                                    </StyledTableCell>
-                                    <StyledTableCell align="center" component="th" scope="row">
-                                        <Checkbox/> {u.name}
-                                    </StyledTableCell>
-                                    <StyledTableCell align="center" component="th" scope="row">
-                                        <Checkbox/> {u.name}
-                                    </StyledTableCell>
-                                </StyledTableRow>
-                            ))}
+
+                            {
+                                rounds.map((r) => {
+                                        let style = []
+                                        return (r.games.map((g) => {
+                                                    for (var i = 0; i < 4; i++) {
+                                                        if (g.winner === r.players[i].name) {
+                                                            style[i] = {border: "solid 10px #f2f2f2", backgroundColor: "orange"}
+                                                        }
+                                                    }
+                                                    return (<StyledTableRow>
+
+                                                            <StyledTableCell align="center" component="th" style={style[0]}>
+                                                                {r.players[0].name}
+                                                            </StyledTableCell>
+                                                            <StyledTableCell align="center" component="th" style={style[1]}>
+
+                                                                {r.players[1].name}
+                                                            </StyledTableCell>
+                                                            <StyledTableCell align="center" component="th" style={style[2]}>
+
+                                                                {r.players[2].name}
+                                                            </StyledTableCell>
+                                                            <StyledTableCell align="center" component="th" style={style[3]}>
+                                                                {r.players[3].name}
+                                                            </StyledTableCell>
+                                                        </StyledTableRow>
+                                                    )
+                                                }
+                                            )
+                                        )
+                                    }
+                                )
+
+                            }
+
                         </TableBody>
                     </Table>
                 </TableContainer>
 
 
-            </Box> );
+            </Box>
+        );
     }
 }
 

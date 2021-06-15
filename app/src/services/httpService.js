@@ -54,6 +54,23 @@ export class httpService {
             return response
         })
     }
+
+    async getAllGames() {
+        const response = await fetch(
+            baseUrl + "/game"
+        );
+        return response.json();
+    }
+
+    async getUserTableHeader() {
+
+        const response = await fetch(
+            baseUrl + "/header/user"
+        );
+        console.log(response)
+        return response.json();
+    }
+
 }
 
 export default httpService;

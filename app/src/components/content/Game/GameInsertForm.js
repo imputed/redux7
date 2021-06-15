@@ -14,8 +14,7 @@ const svc = new httpService()
 export function GameInsertForm(props) {
       const classes = useStyles()
     const createGame= (event) =>{
-    svc.createGame({player: props.players, winner:props.players[0]})
-
+    svc.createGame({player: props.players, winner:props.players[3]})
     }
     return (
         <Box className={classes.box}>

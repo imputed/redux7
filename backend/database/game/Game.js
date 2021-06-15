@@ -23,8 +23,8 @@ class Game {
     }
 
     getAll() {
-        return gameModel.find({}).then((games) => {
-            return games
+        return gameModel.find({}).then((gameRounds) => {
+            return gameRounds
         })
     }
 

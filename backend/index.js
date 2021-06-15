@@ -37,6 +37,12 @@ app.post('/game', (req, res) => {
     res.send(JSON.stringify(result))
 })
 
+app.get('/game', (req, res) => {
+   g.getAll().then((result)=> {
+       res.send(JSON.stringify(result))
+   })
+
+})
 app.get('/user', (req,res) => {
     u.getAll().then((users) => {
         res.send(users)
