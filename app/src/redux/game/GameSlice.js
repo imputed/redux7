@@ -17,5 +17,5 @@ export const gameSlice = createSlice({
 });
 
 export const {setPlayers} = gameSlice.actions;
-export const selectRoundPlayers = (state) => state.game.players;
+export const selectPlayers = (state) => state.game.players;
 export default gameSlice.reducer;

@@ -14,7 +14,7 @@ class UserModel {
             id: Number,
             model: Number,
             name: String,
-            age: Number,
+            mail: String,
             role:String,
             activated:Boolean
         }))

@@ -10,7 +10,6 @@ export default function UserTableRow(props) {
     const deleteUser = (event) => {
         let usr = {}
         usr._id = event.target.attributes.id.value
-        console.log(usr)
         svc.deleteUser(usr).then((res,err) => console.log("deleted " + err +" " + res ))
         dispatch(toggleIsNew())
     }
@@ -24,7 +23,7 @@ export default function UserTableRow(props) {
                 {props.user.name}
             </TableCell>
             <TableCell>
-                {props.user.age}
+                {props.user.mail}
             </TableCell>
             <TableCell>
                 {props.user.role}

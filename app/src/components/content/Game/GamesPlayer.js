@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export function Player(props) {
+export function GamesPlayer(props) {
     const classes = useStyles()
     const handleChange = (event) => {
         props.onChange(props.id, event.target.value);
@@ -46,4 +46,4 @@ export function Player(props) {
     );
 }
 
-export default Player
+export default GamesPlayer

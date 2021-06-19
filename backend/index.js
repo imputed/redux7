@@ -29,12 +29,15 @@ let g = new Game.Game()
 mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.post('/user', (req, res) => {
-    let result =     u.create(req.body.name,req.body.age,req.body.role)
-    res.send(JSON.stringify(result))
+    console.log(req.body)
+    let result =     u.create(req.body.name,req.body.mail,req.body.role).then((result)=> {
+        res.send(JSON.stringify(result))
+    })
 })
 app.post('/game', (req, res) => {
-    let result =    g.create(req.body.player, req.body.winner.name)
-    res.send(JSON.stringify(result))
+    let result =    g.create(req.body.player, req.body.games).then((result)=> {
+        res.send(JSON.stringify(result))
+    })
 })
 
 app.get('/game', (req, res) => {

@@ -61,16 +61,6 @@ export class httpService {
         );
         return response.json();
     }
-
-    async getUserTableHeader() {
-
-        const response = await fetch(
-            baseUrl + "/header/user"
-        );
-        console.log(response)
-        return response.json();
-    }
-
 }
 
 export default httpService;

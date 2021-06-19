@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Box, Button, Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {selectPlayers, selectPlayersId, selectUsers} from "../../../redux/Users/UsersSlice";
-import Player from "./Player";
+import GamesPlayer from "./GamesPlayer";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from '@material-ui/core/FormControl';
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export function PlayerSelector() {
+export function GamesPlayerSelector() {
     const [player1, setPlayer1] = React.useState('')
     const [player2, setPlayer2] = React.useState('')
     const [player3, setPlayer3] = React.useState('')
@@ -45,7 +45,7 @@ export function PlayerSelector() {
             const tmpSelectedPlayers = [player1, player2, player3, player4]
             tmpSelectedPlayers[0] = event.target.value
             setPlayer1(event.target.value);
-            dispatch(dispatch(setPlayers((tmpSelectedPlayers))))
+            dispatch(setPlayers((tmpSelectedPlayers)))
         }
     };
     const handleChangePlayer2 = (event) => {
@@ -53,7 +53,7 @@ export function PlayerSelector() {
             const tmpSelectedPlayers = [player1, player2, player3, player4]
             tmpSelectedPlayers[1] = event.target.value
             setPlayer2(event.target.value);
-            dispatch(dispatch(setPlayers((tmpSelectedPlayers))))
+            dispatch(setPlayers((tmpSelectedPlayers)))
         }
     }
 
@@ -62,7 +62,7 @@ export function PlayerSelector() {
             const tmpSelectedPlayers = [player1, player2, player3, player4]
             tmpSelectedPlayers[2] = event.target.value
             setPlayer3(event.target.value);
-            dispatch(dispatch(setPlayers((tmpSelectedPlayers))))
+            dispatch(setPlayers((tmpSelectedPlayers)))
         }
 
     };
@@ -71,9 +71,10 @@ export function PlayerSelector() {
             const tmpSelectedPlayers = [player1, player2, player3, player4]
             tmpSelectedPlayers[3] = event.target.value
             setPlayer4(event.target.value);
-            dispatch(dispatch(setPlayers((tmpSelectedPlayers))))
+            dispatch(setPlayers(tmpSelectedPlayers));
         }
     };
+  
     const dispatch = useDispatch()
 
 
@@ -91,6 +92,7 @@ export function PlayerSelector() {
                                 id={toString(1)}
                                 value={player1}
                                 onChange={handleChangePlayer1}
+                                name={"sfddsf"}
                                 displayEmpty
                                 className={classes.select}
                                 label={"diabled"}
@@ -98,8 +100,7 @@ export function PlayerSelector() {
                             >
                                 {user.map((u) => {
                                     return (
-                                        <MenuItem key={"MenuItemKey" + u._id} value={u._id}
-                                                  name={"dsf"}>{u.name}</MenuItem>)
+                                        <MenuItem key={"MenuItemKey" + u._id} value={u._id}>{u.name}</MenuItem>)
                                 })}
                             </Select>
                         </Grid>
@@ -183,4 +184,4 @@ export function PlayerSelector() {
 }
 
 
-export default PlayerSelector;
+export default GamesPlayerSelector;

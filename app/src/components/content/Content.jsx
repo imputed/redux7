@@ -6,12 +6,15 @@ import UserForm from "./User/UserForm";
 import {Grid} from "@material-ui/core";
 import GamesInput from "./Game/GamesInput";
 
+
+
+
 export default function Content() {
     const selectedTab = useSelector(selectValue)
     switch (selectedTab) {
         case 0:
             return (
-                <Grid container spacing={8}>
+                <Grid container spacing={8} justify={"center"} style={{margin:50}}>
                     <Grid item>
                         <UserForm/>
                     </Grid>
@@ -22,7 +25,7 @@ export default function Content() {
             )
         case 1:
             return (
-                <Grid container spacing={8}>
+                <Grid container spacing={8} justify={"center"} >
                     <Grid item>
                         <GamesInput/>
                     </Grid>

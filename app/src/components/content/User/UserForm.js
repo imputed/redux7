@@ -5,15 +5,12 @@ import {Button, FormLabel, Input} from "@material-ui/core";
 import {Grid, Box} from "@material-ui/core";
 import {useDispatch} from "react-redux";
 import {
-    setName,
-    setAge,
-    setRole,
     toggleIsNew
 } from '../../../redux/person/PersonSlice';
 import {makeStyles} from "@material-ui/core/styles";
-import httpService from "../../../services/httpService";
+import HttpService from "../../../services/httpService";
 
-const svc = new httpService()
+const svc = new HttpService()
 
 const useStyles = makeStyles(() => ({
     box: {
@@ -31,15 +28,8 @@ export default function UserForm() {
     const { control, handleSubmit } = useForm();
 
     const dispatch = useDispatch();
-
-
     const onSubmit = (data) => {
-            dispatch(setName(data["firstName"] + " " + data["lastName"]))
-            console.log(data["firstName"])
-            dispatch(setAge(data["age"]))
-            dispatch(setRole(data["role"].label))
-
-            const usr = {name: data["firstName"] + " " + data["lastName"], age: data["age"], role: data["role"].label}
+            const usr = {name: data["userName"], mail:data['userMail'], role:data['userRole']}
             Promise.resolve(svc.createUser(usr)).then(() => {
                     dispatch(toggleIsNew())
                 }
@@ -56,27 +46,26 @@ export default function UserForm() {
                     <Grid item>
                         <Grid container spacing={8} justify={"space-between"} alignItems={"center"}>
                             <Grid item>
-                                <FormLabel>First Name</FormLabel>
+                                <FormLabel>Name</FormLabel>
                             </Grid>
                             <Grid item style={{width: "60%"}}>
                                 <Controller
-                                    name="firstName"
+                                    name="userName"
                                     control={control}
                                     defaultValue=""
                                     render={({field}) => <Input style={{width: "100%"}} {...field}   />}
                                 />
 
                             </Grid>
-
                         </Grid>
                         <Grid item>
                             <Grid container spacing={8} justify={"space-between"} alignItems={"center"}>
                                 <Grid item>
-                                    <FormLabel>Last Name</FormLabel>
+                                    <FormLabel>Mail</FormLabel>
                                 </Grid>
                                 <Grid item style={{width: "60%"}}>
                                     <Controller
-                                        name="lastName"
+                                        name="userMail"
                                         control={control}
                                         defaultValue=""
                                         render={({field}) => <Input style={{width: "100%"}} {...field} />}
@@ -86,31 +75,17 @@ export default function UserForm() {
                         </Grid>
                         <Grid container spacing={8} justify={"space-between"} alignItems={"center"}>
                             <Grid item>
-                                <FormLabel>Age</FormLabel>
-                            </Grid>
-                            <Grid item style={{width: "60%"}}>
-                                <Controller
-                                    name="age"
-                                    control={control}
-                                    defaultValue=""
-                                    render={({field}) => <Input type={"number"} style={{width: "100%"}} {...field} />}
-                                />
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={8} justify={"space-between"} alignItems={"center"}>
-                            <Grid item>
                                 <FormLabel>Role</FormLabel>
                             </Grid>
                             <Grid item style={{width: "60%"}}>
                                 <Controller
-                                    name="role"
+                                    name="userRole"
                                     control={control}
                                     render={({field}) => <Select
                                         {...field}
                                         options={[
-                                            {value: "1", label: "Worker"},
-                                            {value: "2", label: "Developer"},
-                                            {value: "3", label: "Admin"}
+                                            {value: "1", label: "Player"},
+                                            {value: "2", label: "Admin"}
                                         ]}
                                     />}
                                 />
