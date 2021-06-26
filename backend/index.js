@@ -29,39 +29,39 @@ let g = new Game.Game()
 mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.post('/user', (req, res) => {
-    console.log(req.body)
-    let result =     u.create(req.body.name,req.body.mail,req.body.role).then((result)=> {
-        res.send(JSON.stringify(result))
-    })
+    const result = Promise.resolve(u.create(req.body.name, req.body.mail, req.body.role))
+    res.send(JSON.stringify(result))
 })
 app.post('/game', (req, res) => {
-    let result =    g.create(req.body.player, req.body.games).then((result)=> {
-        res.send(JSON.stringify(result))
+    g.create(req.body.player, req.body.games).then((res) => {
+
+        res.send(res)
     })
 })
 
 app.get('/game', (req, res) => {
-   g.getAll().then((result)=> {
-       res.send(JSON.stringify(result))
-   })
 
-})
-app.get('/user', (req,res) => {
-    u.getAll().then((users) => {
-        res.send(users)
+    g.getAll(JSON.parse(req.query.players).players).then((result) => {
+        res.send(JSON.stringify(result))
     })
 
 })
-app.delete('/user', (req,res) => {
-    console.log(req.body)
+app.get('/user', (req, res) => {
+    u.getAll().then((users) => {
+        res.send(users)
+    })
+})
+
+
+app.delete('/user', (req, res) => {
     u.delete(req.body._id)
     res.send(u)
 
 
 })
-app.get('/header/user', (req,res) => {
-   u.getHeader().then((header) => {
-       res.send(header)
+app.get('/header/user', (req, res) => {
+    u.getHeader().then((header) => {
+        res.send(header)
     })
 })
 

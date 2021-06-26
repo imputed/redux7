@@ -8,7 +8,6 @@ import GamesInput from "./Game/GamesInput";
 
 
 
-
 export default function Content() {
     const selectedTab = useSelector(selectValue)
     switch (selectedTab) {

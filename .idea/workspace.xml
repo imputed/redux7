@@ -5,39 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1d20fb-73cb-4b5f-87d5-45a32452e960" name="Default Changelist" comment="Game Fixed">
-      <change afterPath="$PROJECT_DIR$/app/src/components/content/Game/GamesTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.idea/app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go_backend/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go_backend/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go_backend/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go_backend/main.go.save" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go_backend/users" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/components/content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/GameInsertForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/GameInsertForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/GamesInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/GamesInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/GamesPlayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/PlayerSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/GamesPlayerSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/PlayerTable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/GamesTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/GamesTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/components/content/User/Table/UserTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/User/Table/UserTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/components/content/User/Table/UserTableRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/User/Table/UserTableRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/content/User/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/User/UserForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/redux/Users/UsersSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/Users/UsersSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/redux/game/GameSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/game/GameSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/services/httpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/services/httpService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/database/game/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/game/Game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/database/user/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/user/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/user/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/user/UserModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@types/bson/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@types/bson/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@types/mongodb/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@types/mongodb/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@types/node/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/sift/es5m/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/sift/es5m/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/sift/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/sift/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/sift/sift.csp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/sift/sift.csp.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://C:/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -49,17 +58,39 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/go_backend/main.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/go_backend/go.mod" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/go_backend/go.sum" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1tzBg2C1PYhHTFJcPtCsPCwmepC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/components/content/Game" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -67,7 +98,27 @@
       <recent name="\\wsl$\Ubuntu-20.04\home\bene\redux7\app\src\components\content\Game" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.BE">
+  <component name="RunManager" selected="JavaScript Debug.fe">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="redux" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/../redux7|//wsl$/Ubuntu-20.04/home/bene/redux7/go_backend/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="redux" />
+      <target name="WSL - Ubuntu-20.04" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/go_backend/main.go" />
+      <option name="build_on_remote_target" value="true" />
+      <method v="2" />
+    </configuration>
     <configuration name="fe" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -92,12 +143,35 @@
       <workItem from="1624081567618" duration="3897000" />
       <workItem from="1624091728359" duration="325000" />
       <workItem from="1624092199260" duration="4293000" />
-      <workItem from="1624096549733" duration="231000" />
+      <workItem from="1624096549733" duration="673000" />
+      <workItem from="1624102901615" duration="3740000" />
+      <workItem from="1624174135235" duration="4842000" />
+      <workItem from="1624206815364" duration="7631000" />
+      <workItem from="1624216063023" duration="361000" />
+      <workItem from="1624276978909" duration="476000" />
+      <workItem from="1624277676095" duration="14000" />
+      <workItem from="1624290240017" duration="5000" />
+      <workItem from="1624290650033" duration="98000" />
+      <workItem from="1624290839113" duration="710000" />
+      <workItem from="1624726494434" duration="127000" />
+      <workItem from="1624728915331" duration="1846000" />
     </task>
+    <task id="LOCAL-00001" summary="Game Fixed">
+      <created>1624096818385</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624096818385</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.configurationType" implementationName="JavascriptDebugType" />
+    <option featureType="com.intellij.configurationType" implementationName="NodeJSConfigurationType" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -112,40 +186,38 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Game Fixed" />
     <option name="LAST_COMMIT_MESSAGE" value="Game Fixed" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/src/components/content/Game/GameInsertForm.js</url>
-          <line>38</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/src/components/content/Game/GamesPlayerSelector.js</url>
-          <line>46</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/backend/database/game/Game.js</url>
-          <line>8</line>
-          <option name="timeStamp" value="41" />
+          <url>file://$PROJECT_DIR$/app/src/services/httpService.js</url>
+          <line>39</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
-        <watch expression="r.games" language="JavaScript" />
-        <watch expression="r" language="JavaScript" />
-        <watch expression="g" language="JavaScript" />
-        <watch expression="event.target" language="JavaScript" />
-        <watch expression="rounds" language="JavaScript" />
+        <watch expression="console.log(u._id)" />
+        <watch expression="r" />
+        <watch expression="g" />
+        <watch expression="players.length" />
+        <watch expression="user[0].Key" />
       </configuration>
       <configuration name="NodeJSConfigurationType">
-        <watch expression="req.body" language="JavaScript" />
-        <watch expression="JSON.stringify(result)" language="JavaScript" />
+        <watch expression="player.length" />
+        <watch expression="JSON.parse(player)" />
+        <watch expression="typeof(player)" />
+        <watch expression="games" />
+        <watch expression="player" />
       </configuration>
     </watches-manager>
   </component>

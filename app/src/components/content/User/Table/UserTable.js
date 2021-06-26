@@ -11,9 +11,9 @@ export default function UserTable() {
     const header = ["ID", "Name", "Mail", "Role"]
     const users = useSelector(selectUsers)
     useEffect(() => {
-        new httpService().getAllUsers().then((users) => {
-            setData(users)
-            dispatch(setUsers(users))
+        new httpService().getAllUsers().then((result) => {
+            setData(result.user)
+            dispatch(setUsers(result.user))
         })
     }, [dispatch, users]);
 
@@ -32,7 +32,7 @@ export default function UserTable() {
             <TableBody>
                 {data.map((user, index) => {
                     return (
-                        <UserTableRow user={user} index={index} key={"UserTableRow_" + user._id}/>
+                        <UserTableRow user={user} index={index} key={"UserTableRow_" + user.ID}/>
                     )
                 })}
             </TableBody>

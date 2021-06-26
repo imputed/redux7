@@ -26,6 +26,7 @@ class User {
 
     getAll() {
         return userModel.find({activated:true}).then((users) => {
+            console.log(users)
             return users
         })
     }

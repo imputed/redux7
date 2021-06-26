@@ -12,10 +12,10 @@ export const gameSlice = createSlice({
     reducers: {
         setPlayers: (state, action) => {
             state.players = action.payload
-        }
+        },
     },
 });
 
 export const {setPlayers} = gameSlice.actions;
-export const selectPlayers = (state) => state.game.players;
+export const getPlayer = (state) => state.game.players;
 export default gameSlice.reducer;

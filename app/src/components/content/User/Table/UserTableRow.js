@@ -8,31 +8,31 @@ export default function UserTableRow(props) {
     const svc = new HttpService()
     const dispatch = useDispatch()
     const deleteUser = (event) => {
-        let usr = {}
-        usr._id = event.target.attributes.id.value
-        svc.deleteUser(usr).then((res,err) => console.log("deleted " + err +" " + res ))
+
+        svc.deleteUser(event.target.attributes.id.value).then((res, err) => console.log("deleted " + err + " " + res))
         dispatch(toggleIsNew())
     }
 
     return (
-        <TableRow key={"key_data_user_row_" + props.user._id}>
+        <TableRow key={"key_data_user_row_" + props.user.ID}>
             <TableCell>
-                {props.user._id}
+                {props.user.ID}
             </TableCell>
             <TableCell>
-                {props.user.name}
+                {props.user.Name}
             </TableCell>
             <TableCell>
-                {props.user.mail}
+                {props.user.Mail}
             </TableCell>
             <TableCell>
-                {props.user.role}
+                {props.user.Role}
             </TableCell>
             <TableCell>
-                <button type={"submit"} id={props.user._id}  onClick={(event) => {
+                <button type={"submit"} id={props.user.ID} onClick={(event) => {
                     deleteUser(event)
                 }}>
-                    Delete</button>
+                    Delete
+                </button>
             </TableCell>
         </TableRow>
     )

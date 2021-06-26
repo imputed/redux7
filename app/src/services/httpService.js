@@ -1,4 +1,5 @@
 const baseUrl = "http://localhost:3002"
+const axios = require('axios').default;
 
 export class httpService {
 
@@ -29,14 +30,14 @@ export class httpService {
         return response.json();
     }
 
-    async deleteUser(userAsJson) {
+    async deleteUser(id) {
 
         fetch(baseUrl + "/user", {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(userAsJson)
+            body: JSON.stringify(id)
         }).then(response => {
             return response
         })
@@ -46,7 +47,7 @@ export class httpService {
 
         fetch(baseUrl + "/game", {
             method: 'POST',
-            headers: {
+            "headers": {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(gameAsJson)
@@ -55,11 +56,19 @@ export class httpService {
         })
     }
 
-    async getAllGames() {
-        const response = await fetch(
-            baseUrl + "/game"
-        );
-        return response.json();
+    async getAllGames(players) {
+        axios.get(baseUrl + "/game", {
+            params: {
+                players: players
+            }
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
     }
 }
 

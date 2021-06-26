@@ -1,18 +1,13 @@
 import React, {useEffect} from 'react';
-
 import {useSelector} from "react-redux";
 import {Box, Table} from "@material-ui/core";
-
 import {makeStyles, withStyles} from '@material-ui/core/styles';
-
 import TableBody from '@material-ui/core/TableBody';
-
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-
-import {selectPlayers} from "../../../redux/game/GameSlice";
+import {getPlayer} from "../../../redux/game/GameSlice";
 import {selectUsers, setUsers} from "../../../redux/Users/UsersSlice";
 import GameInsertForm from "./GameInsertForm";
 import TableCell from "@material-ui/core/TableCell";
@@ -45,17 +40,18 @@ export function GamesTable() {
     const classes = useStyles();
     const svc = new httpService()
     const [rounds, setRounds] = React.useState([])
-
-    useEffect(() => {
-        new httpService().getAllGames().then((games) => {
-            setRounds(games)
-        })
-    }, [rounds]);
-
-    const selectedPlayers = useSelector(selectPlayers)
+    const selectedPlayers = useSelector(getPlayer)
     const users = useSelector(selectUsers)
 
-    if (selectedPlayers.filter((p) => p !== '').length < 4) {
+    useEffect(() => {
+            new httpService().getAllGames({players: selectedPlayers}).then((games) => {
+                setRounds(games)
+            })
+        }
+    )
+
+
+    if (selectedPlayers.filter((p) => p !== '').length < 5) {
         return (<Box>
             <GameInsertForm players={users.filter((u) => {
                 let returnValue = false
