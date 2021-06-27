@@ -4,7 +4,7 @@ import TabsNavigation from "./components/navigation/TabsNavigation";
 import {Paper} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {useDispatch, useSelector} from "react-redux";
-import {selectAuthorized, setAuthorized} from "./redux/login/LoginSlice";
+import {selectAuthorized, selectAuthorizedUser, setAuthorized} from "./redux/login/LoginSlice";
 import Button from "@material-ui/core/Button";
 import {changeTab} from "./redux/tabvalue/tabvalueSlice";
 
@@ -19,7 +19,9 @@ const useStyles = makeStyles((theme) => ({
 function App() {
 
     const authorized = useSelector(selectAuthorized)
+    const user = useSelector(selectAuthorizedUser)
     const dispatch = useDispatch()
+
 
     const classes = useStyles()
     if (authorized === true) {
@@ -28,12 +30,20 @@ function App() {
                 <Button onClick={() => {
                     dispatch(setAuthorized(false))
                     dispatch(changeTab(0))
+
                 }}
+
+
                 >Log Off</Button>
                 <Paper className={classes.root}>
                     <TabsNavigation/>
                     <Content/>
+                    <h1>{user.id}</h1>
+                    <h1>{user.name}</h1>
+                    <h1>{user.role}</h1>
+                    <h1>{user.mail}</h1>
                 </Paper>
+
             </>
         )
     } else {

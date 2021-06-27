@@ -9,7 +9,7 @@ import {
 import {makeStyles} from "@material-ui/core/styles";
 import userService from "../../services/userService";
 import LoginRegister from './index'
-import {selectAuthorized, setAuthorized} from "../../redux/login/LoginSlice";
+import {selectAuthorized, setAuthorized, setAuthorizedUser} from "../../redux/login/LoginSlice";
 import {changeTab} from "../../redux/tabvalue/tabvalueSlice";
 
 
@@ -62,6 +62,7 @@ export default function LoginRegisterForm() {
             if (response.token !== '') {
                 window.sessionStorage.setItem("AccessToken", response.token)
                 dispatch(setAuthorized(true))
+                dispatch(setAuthorizedUser(response.user))
                 dispatch(changeTab(1))
             }
 
