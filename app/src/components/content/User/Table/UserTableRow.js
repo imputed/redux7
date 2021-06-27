@@ -16,16 +16,16 @@ export default function UserTableRow(props) {
     return (
         <TableRow key={"key_data_user_row_" + props.user.ID}>
             <TableCell>
-                {props.user.ID}
+                {props.user.id}
             </TableCell>
             <TableCell>
-                {props.user.Name}
+                {props.user.name}
             </TableCell>
             <TableCell>
-                {props.user.Mail}
+                {props.user.mail}
             </TableCell>
             <TableCell>
-                {props.user.Role}
+                {props.user.role}
             </TableCell>
             <TableCell>
                 <button type={"submit"} id={props.user.ID} onClick={(event) => {

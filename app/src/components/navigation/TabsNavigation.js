@@ -6,6 +6,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
+import {selectAuthorized} from "../../redux/login/LoginSlice";
 
 const useStyles = makeStyles({
     root: {
@@ -16,12 +17,16 @@ const useStyles = makeStyles({
 export default function TabsNavigation() {
     const classes = useStyles();
     const dispatch = useDispatch();
+    const authorized = useSelector(selectAuthorized)
     const selectedTab = useSelector(selectValue)
 
     const handleChange = (event, newValue) => {
         dispatch(changeTab(newValue))
     };
-
+    let firstTitle = "Login"
+    if (authorized===true){
+firstTitle ="My Profile"
+    }
     return (
         <Paper className={classes.root}>
             <AppBar position="static">
@@ -32,10 +37,10 @@ export default function TabsNavigation() {
                     indicatorColor="primary"
                     centered
                 >
+                    <Tab label={firstTitle}/>
                     <Tab label="User"/>
                     <Tab label="Games"/>
                 </Tabs>
-
             </AppBar>
         </Paper>
     );
