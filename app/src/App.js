@@ -3,10 +3,12 @@ import Content from "./components/content/Content";
 import TabsNavigation from "./components/navigation/TabsNavigation";
 import {Paper} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
-import {useDispatch, useSelector} from "react-redux";
-import {selectAuthorized, selectAuthorizedUser, setAuthorized} from "./redux/login/LoginSlice";
-import Button from "@material-ui/core/Button";
-import {changeTab} from "./redux/tabvalue/tabvalueSlice";
+import {useDispatch} from "react-redux";
+import {setAuthorized, setAuthorizedUser} from "./redux/login/LoginSlice";
+import Navbar from "./components/navigation/Navbar";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Profile from "./components/profile/profile";
+import userService from "./services/userService";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,44 +19,32 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function App() {
-
-    const authorized = useSelector(selectAuthorized)
-    const user = useSelector(selectAuthorizedUser)
     const dispatch = useDispatch()
-
-
-    const classes = useStyles()
-    if (authorized === true) {
-        return (
-            <>
-                <Button onClick={() => {
-                    dispatch(setAuthorized(false))
-                    dispatch(changeTab(0))
-
-                }}
-
-
-                >Log Off</Button>
-                <Paper className={classes.root}>
-                    <TabsNavigation/>
-                    <Content/>
-                    <h1>{user.id}</h1>
-                    <h1>{user.name}</h1>
-                    <h1>{user.role}</h1>
-                    <h1>{user.mail}</h1>
-                </Paper>
-
-            </>
-        )
-    } else {
-        return (
-            <Paper className={classes.root}>
-                <TabsNavigation/>
-                <Content/>
-            </Paper>
+    const token = window.sessionStorage.getItem("AccessToken")
+    if (token !== '') {
+        new userService().validateToken({"token": token}).then((result) => {
+                dispatch(setAuthorizedUser(result.user))
+                dispatch(setAuthorized(true))
+            }
         )
     }
-
+        const classes = useStyles()
+        return (
+            <Router>
+                <Navbar/>
+                <Switch>
+                    <Route exact path="/profil">
+                        <Profile/>
+                    </Route>
+                    <Route exact path="/">
+                        <Paper className={classes.root}>
+                            <TabsNavigation/>
+                            <Content/>
+                        </Paper>
+                    </Route>
+                </Switch>
+            </Router>
+        )
 }
 
 export default App;

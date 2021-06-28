@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1d20fb-73cb-4b5f-87d5-45a32452e960" name="Default Changelist" comment="Game Fixed">
+      <change afterPath="$PROJECT_DIR$/app/src/components/navigation/Navbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/components/profile/profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/components/login/LoginRegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/login/LoginRegisterForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/redux/login/LoginSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/login/LoginSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/services/userService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,12 +106,24 @@
     <configuration name="fe" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
-    <configuration name="BE" type="NodeJSConfigurationType" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/backend">
+    <configuration name="Start" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="yarn start" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.fe" />
-      <item itemvalue="Node.js.BE" />
+      <item itemvalue="Shell Script.Start" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -140,6 +159,9 @@
       <workItem from="1624812792632" duration="3166000" />
       <workItem from="1624819677164" duration="775000" />
       <workItem from="1624820849279" duration="1204000" />
+      <workItem from="1624861091975" duration="2838000" />
+      <workItem from="1624881969669" duration="2089000" />
+      <workItem from="1624890724380" duration="7810000" />
     </task>
     <task id="LOCAL-00001" summary="Game Fixed">
       <created>1624096818385</created>
@@ -185,32 +207,6 @@
           <url>file://$PROJECT_DIR$/app/src/services/httpService.js</url>
           <line>39</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/src/services/userService.js</url>
-          <line>29</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/src/components/login/LoginRegisterForm.js</url>
-          <line>63</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/src/components/login/LoginRegisterForm.js</url>
-          <line>62</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/src/components/login/LoginRegisterForm.js</url>
-          <line>61</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/src/components/login/LoginRegisterForm.js</url>
-          <line>60</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

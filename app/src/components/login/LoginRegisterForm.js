@@ -61,7 +61,6 @@ export default function LoginRegisterForm() {
         new userService().loginUser(user).then((response) => {
             if (response.token !== '') {
                 window.sessionStorage.setItem("AccessToken", response.token)
-                dispatch(setAuthorized(true))
                 dispatch(setAuthorizedUser(response.user))
                 dispatch(changeTab(1))
             }

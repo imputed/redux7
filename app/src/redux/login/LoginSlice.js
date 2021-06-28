@@ -20,6 +20,9 @@ export const loginSlice = createSlice({
         },
         setAuthorizedUser: (state, action) => {
             state.user = action.payload
+            if (action.payload!=={}){
+                state.authorized=true
+            }
         },
 
     },
