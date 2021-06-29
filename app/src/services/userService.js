@@ -43,9 +43,24 @@ export class userService {
 
         })
         return (await r).json()
-
-
     }
+    async getAllUsers() {
+        const response = await fetch(
+            baseUrl + "/user"
+        );
+        return response.json();
+    }
+
+    async getPlayer(playerIDs) {
+        const response = await  axios.get(baseUrl + "/user/player", {
+            params: {
+               playerIDs
+            }
+        })
+
+        return response.json()
+    }
+
 }
 
 

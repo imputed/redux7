@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 import UserTable from "./User/Table/UserTable";
 import LoginRegisterForm from "../login/LoginRegisterForm";
 import {Grid} from "@material-ui/core";
-import GamesInput from "./Game/GamesInput";
+import GameController from "./Game/GameController";
 import {selectAuthorized, selectAuthorizedUser, setAuthorized} from "../../redux/login/LoginSlice";
 import Profile from "../profile/profile";
 
@@ -46,7 +46,7 @@ export default function Content() {
             return (
                 <Grid container spacing={8} justify={"center"}>
                     <Grid item>
-                        <GamesInput/>
+                        <GameController/>
                     </Grid>
                 </Grid>
             )

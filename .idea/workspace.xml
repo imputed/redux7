@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b1d20fb-73cb-4b5f-87d5-45a32452e960" name="Default Changelist" comment="Game Fixed">
-      <change afterPath="$PROJECT_DIR$/app/src/components/navigation/Navbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/profile/profile.jsx" afterDir="false" />
+    <list default="true" id="8b1d20fb-73cb-4b5f-87d5-45a32452e960" name="Default Changelist" comment="Added LogOff&#10;Authorization Functionality">
+      <change afterPath="$PROJECT_DIR$/app/src/components/content/Game/GamePlayerSelector/GamePlayerSelector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/components/content/Game/GamePlayerSelector/GameSinglePlayerSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/services/APIService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/components/content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/login/LoginRegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/login/LoginRegisterForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/redux/login/LoginSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/login/LoginSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/GameInsertForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/GameInsertForm/GameInsertForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/GamesInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/GameController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/GamesPlayerSelector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/content/Game/GamesTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/Game/GameTable/GameTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/content/User/Table/UserTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/content/User/Table/UserTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/services/httpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/services/httpService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/services/userService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -66,7 +70,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/redux/login" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/components/content/Game" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -74,11 +78,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bene\Documents\redux7\app\src\components\content\Game" />
       <recent name="C:\Users\bene\Documents\redux7\app\src\redux\login" />
       <recent name="C:\Users\bene\Documents\redux7\app\src\services" />
       <recent name="\\wsl$\Ubuntu-20.04\home\bene\redux7\app\src\components\content\Game" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bene\Documents\redux7\app\src\components\content\Game\GameInsertForm" />
+      <recent name="C:\Users\bene\Documents\redux7\app\src\components\content\Game\GamesPlayerSelector" />
+      <recent name="C:\Users\bene\Documents\redux7\app\src\components\content\Game\GameTable" />
       <recent name="C:\Users\bene\Documents\redux7\app\src\components\login" />
     </key>
   </component>
@@ -112,7 +120,7 @@
       <option name="SCRIPT_PATH" value="" />
       <option name="SCRIPT_OPTIONS" value="" />
       <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
       <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
       <option name="INTERPRETER_PATH" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,7 +169,10 @@
       <workItem from="1624820849279" duration="1204000" />
       <workItem from="1624861091975" duration="2838000" />
       <workItem from="1624881969669" duration="2089000" />
-      <workItem from="1624890724380" duration="7810000" />
+      <workItem from="1624890724380" duration="7996000" />
+      <workItem from="1624945415948" duration="2476000" />
+      <workItem from="1624978189847" duration="6813000" />
+      <workItem from="1624993636717" duration="4855000" />
     </task>
     <task id="LOCAL-00001" summary="Game Fixed">
       <created>1624096818385</created>
@@ -170,7 +181,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624096818385</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added LogOff&#10;Authorization Functionality">
+      <created>1624900205709</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624900205710</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added LogOff&#10;Authorization Functionality">
+      <created>1624900259767</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624900259767</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +220,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Game Fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Game Fixed" />
+    <MESSAGE value="Added LogOff&#10;Authorization Functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added LogOff&#10;Authorization Functionality" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -205,7 +231,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/src/services/httpService.js</url>
-          <line>39</line>
+          <line>34</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

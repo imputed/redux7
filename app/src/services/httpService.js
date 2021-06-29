@@ -15,12 +15,7 @@ export class httpService {
         })
     }
 
-    async getAllUsers() {
-        const response = await fetch(
-            baseUrl + "/user"
-        );
-        return response.json();
-    }
+
 
     async getUserTableHeader() {
 

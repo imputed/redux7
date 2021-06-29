@@ -1,10 +1,10 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 import {Box, Button, Grid, Typography} from "@material-ui/core";
-import httpService from "../../../services/httpService";
+import httpService from "../../../../services/httpService";
 import MenuItem from '@material-ui/core/MenuItem';
 import Card from '@material-ui/core/Card';
-import {getPlayer} from '../../../redux/game/GameSlice.js'
+import {getPlayer} from '../../../../redux/game/GameSlice.js'
 
 import Select from '@material-ui/core/Select';
 import {useSelector} from "react-redux";

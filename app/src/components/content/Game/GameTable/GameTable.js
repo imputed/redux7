@@ -7,11 +7,12 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import {getPlayer} from "../../../redux/game/GameSlice";
-import {selectUsers, setUsers} from "../../../redux/Users/UsersSlice";
-import GameInsertForm from "./GameInsertForm";
+import {getPlayer} from "../../../../redux/game/GameSlice";
+import {selectUsers, setUsers} from "../../../../redux/Users/UsersSlice";
+import GameInsertForm from "../GameInsertForm/GameInsertForm";
 import TableCell from "@material-ui/core/TableCell";
-import httpService from "../../../services/httpService";
+import httpService from "../../../../services/httpService";
+import APIService from "../../../../services/APIService";
 
 const useStyles = makeStyles({
     table: {
@@ -36,17 +37,17 @@ const StyledTableRow = withStyles((theme) => ({
     },
 }))(TableRow);
 
-export function GamesTable() {
+export function GameTable(props) {
     const classes = useStyles();
-    const svc = new httpService()
     const [rounds, setRounds] = React.useState([])
-    const selectedPlayers = useSelector(getPlayer)
+    const selectedPlayers = []
     const users = useSelector(selectUsers)
-
+    const [player,setPlayer] = React.useState([])
     useEffect(() => {
-            new httpService().getAllGames({players: selectedPlayers}).then((games) => {
-                setRounds(games)
-            })
+        APIService().UserService.getPlayer(props.selectedPlayer).then((result)=> {setPlayer(result) })
+        // APIService.HTTPService.getAllGames({players: props.selectedPlayer}).then((games) => {
+        //         setRounds(games)
+        //     })
         }
     )
 
@@ -144,4 +145,4 @@ export function GamesTable() {
 }
 
 
-export default GamesTable;
+export default GameTable;

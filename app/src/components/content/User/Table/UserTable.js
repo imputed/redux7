@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import UserTableRow from "./UserTableRow";
 import {selectUsers, setUsers} from "../../../../redux/Users/UsersSlice";
 import httpService from "../../../../services/httpService";
+import APIService from "../../../../services/APIService";
 
 export default function UserTable() {
     const [data, setData] = useState([]);
@@ -11,7 +12,7 @@ export default function UserTable() {
     const header = ["ID", "Name", "Mail", "Role"]
     const users = useSelector(selectUsers)
     useEffect(() => {
-        new httpService().getAllUsers().then((result) => {
+       APIService().UserService.getAllUsers().then((result) => {
             setData(result.user)
             dispatch(setUsers(result.user))
         })
